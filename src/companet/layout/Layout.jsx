@@ -1,17 +1,18 @@
 import React from 'react';
+import {Container} from "../../homePage/container/Container.jsx"
 import Header from "../header/Header.jsx";
+import {Outlet} from "react-router";
 import Footer from "../footer/Footer.jsx";
-import {Outlet} from "react-router-dom";
-
-const Layout = () => {
+export default function Layout() {
     return (
-        <>
-            <Header/>
-            <Outlet/>
-            {/*<main>{children}</main>*/}
-            <Footer/>
-        </>
-    );
-};
-
-export default Layout;
+        <div>
+            <Container>
+                <>
+                    <Header/>
+                    <Outlet/>
+                    <Footer/>
+                </>
+           </Container>
+        </div>
+    )
+}

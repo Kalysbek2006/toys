@@ -31,6 +31,7 @@ const Header = () => {
                         <Search/>
                     </button>
                 </div>
+
         </header>
     );
 };
