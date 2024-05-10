@@ -4,21 +4,24 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Layout from "./companet/layout/Layout.jsx";
 import HomePage from "./homePage/HomePage.jsx";
+import Error from "./homePage/Error.jsx";
 
 const router = createBrowserRouter([
     {
         path:'/',
         element:<Layout/>,
-        errorElement:<div>error</div>
-    },
-    {
-        path:'/',
-        element:<HomePage/>
-    },
-    // {
-    //     path:'/',
-    //     element:
-    // }
+        errorElement:<Error/>,
+        children:[
+            {
+                path:'/',
+                element:<HomePage/>
+            }
+            // {
+            //     path:'/',
+            //     element:
+            // }
+        ]
+    }
 ])
 
 
