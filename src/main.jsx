@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Layout from "./companet/layout/Layout.jsx";
+import Layout from './companet/layout/Layout.jsx'
 import HomePage from "./homePage/HomePage.jsx";
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Products from "./companet/products/Products.jsx";
