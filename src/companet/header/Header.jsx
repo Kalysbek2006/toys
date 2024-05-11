@@ -1,8 +1,12 @@
 import React from 'react';
 import Clock from "../../assets/svg/Clock.jsx";
 import Search from "../../assets/svg/Search.jsx";
+import { useNavigate } from 'react-router';
 
 const Header = () => {
+
+    const navigate = useNavigate();
+
     return (
         <header className="w-[1169px] h-[94px] flex items-center justify-between border-b-[1px]">
             <div className="border-x-[1px]">
@@ -25,8 +29,13 @@ const Header = () => {
                     <h1 className="text-[18px] font-medium">Бишкек</h1>
                 </div>
           <div className="flex gap-[10px]">
-                    <a href="#" className="text-[18px]">Отзывы</a>
-                    <a href="#" className="text-[18px]">Доставка и оплата</a>
+                    <a onClick={() => {
+                        navigate(`/reviews`);
+                      }}
+                    className="text-[18px] hover:text-orange-500 duration-300 cursor-pointer">Отзывы</a>
+                    <a onClick={() => {
+                        navigate(`/delivery`);
+                      }} className="text-[18px] hover:text-orange-500 duration-300">Доставка и оплата</a>
                     <button className="">
                         <Search/>
                     </button>

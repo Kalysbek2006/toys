@@ -1,3 +1,3 @@
 export function Container({children}){
-    return(<div className="w-[1240px] m-auto">{children}</div>)
+    return(<div className="w-[1000px] m-auto">{children}</div>)
 }
