@@ -16,8 +16,8 @@ const Card = () => {
                                     whileHover={{scale: 1.05, boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.1)'}}
                                     initial={{opacity: 0, y: 50}}
                                     animate={{opacity: 1, y: 0}}
-                                    transition={{duration: 0.5}}
-                                   >
+                                    transition={{duration: 0.5}}>
+
 
                             <img src={props.el.img} alt="img" className="w-[253px] h-[211px] m-auto"/>
 
