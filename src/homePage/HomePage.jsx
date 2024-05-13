@@ -6,7 +6,7 @@ import {Outlet} from "react-router";
 import Info from "../companet/Info.jsx";
 import {motion} from "framer-motion";
 import {useNavigate} from "react-router-dom";
-import Left from "../companet/left/Left.jsx";
+
 
 const HomePage = () => {
     const navigate = useNavigate()
@@ -14,7 +14,6 @@ const HomePage = () => {
         <div>
             <Container>
                <>
-                   <Left/>
                    <Home/>
                    <Categori/>
                    <motion.div className="flex justify-evenly" >
@@ -31,7 +30,6 @@ const HomePage = () => {
                            Популярное
                        </motion.h1>
                    </motion.div>
-                   {/*<HomeSwiper/>*/}
                    <Info/>
                </>
                 <Outlet/>

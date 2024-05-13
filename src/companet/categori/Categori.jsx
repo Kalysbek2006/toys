@@ -11,28 +11,23 @@ const Categori = () => {
             <div className="flex items-center justify-evenly gap-[30px]">
                 <div>
                     <div>
-                        <img className="relative" src={homeOne} alt="img"/>
-                        <p className="text-[24px] text-white font-medium absolute top-[830px] left-[130px]">Чикен</p>
+                        <img src={homeOne} alt="img"/>
                     </div>
                     <div>
-                        <img className="relative pt-[30px]" src={homeTwo} alt="img"/>
-                        <p className="text-[24px] text-white font-medium absolute top-[1050px] left-[140px]">Пицца</p>
+                        <img className=" pt-[30px]" src={homeTwo} alt="img"/>
                     </div>
                 </div>
                 <div>
                     <div className="flex gap-[20px]">
                         <div>
-                            <img className="relative" src={homeThree} alt="img"/>
-                            <p className="text-[24px]  font-medium absolute top-[830px] left-[920px]">С угрем</p>
+                            <img src={homeThree} alt="img"/>
                         </div>
                         <div>
-                            <img className="relative" src={homeFive} alt="img"/>
-                            <p className="text-[24px] text-white font-medium absolute top-[830px] left-[80px]">Чикен</p>
+                            <img src={homeFive} alt="img"/>
                         </div>
                     </div>
                     <div>
-                        <img className="relative pt-[30px]" src={homeFour} alt="img"/>
-                        <p className="text-[24px] text-white font-medium absolute top-[1050px] left-[720px]">Акции</p>
+                        <img className=" pt-[30px]" src={homeFour} alt="img"/>
                     </div>
                 </div>
             </div>

@@ -21,8 +21,8 @@ const AccordionModal = () => {
     return (
         <div>
             <motion.div whileHover={{color: "#ff6600", scale: 1.1, transition: { duration: 0.3 } }}
-                        onClick={accordion} className="flex items-center gap-[12px]">
-                <h2 className="cursor-pointer">lerom</h2>
+                        onClick={accordion} className="flex items-center gap-[12px] mb-[10px]">
+                <h2 className="cursor-pointer text-[20px]">lerom</h2>
                 <svg className={`h-6 w-6 transition-transform transform ${mod ? 'rotate-10' : 'rotate-0'}`}
                      fill="none"
                      stroke="currentColor">
