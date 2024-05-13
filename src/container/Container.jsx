@@ -1,4 +1,5 @@
 import logo from "../assets/img/Mask Group.png"
+import Left from "../companet/left/Left.jsx";
 
 
 export function Container({children}){

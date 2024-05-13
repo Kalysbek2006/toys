@@ -7,6 +7,8 @@ import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Products from "./companet/products/Products.jsx";
 import Details from "./companet/details/Details.jsx";
 import Layout from "./companet/layout/Layout.jsx";
+import ReviewsPage from './reviewsPage/ReviewsPage.jsx';
+import DeliveryPage from './deliveryPage/DeliveryPage.jsx';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
             {
                 path:'/products',
                 element:<Products/>
+            },
+            {
+                path:"/reviews",
+                element:<ReviewsPage/>
+            },
+            {
+                path:"/delivery",
+                element:<DeliveryPage/>
             },
         ]
     }

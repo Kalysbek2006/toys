@@ -1,8 +1,12 @@
 import React from 'react';
 import Clock from "../../assets/svg/Clock.jsx";
 import Search from "../../assets/svg/Search.jsx";
+import { useNavigate } from 'react-router';
 
 const Header = () => {
+
+    const navigate = useNavigate();
+
     return (
         <header className="w-[950зч] h-[94px] flex items-center border-b-[1px]">
             <div className="border-x-[1px]">
@@ -20,19 +24,22 @@ const Header = () => {
                     <p className="text-[#A4ACAD] text-[15px]">работаем с 10:00 до 00:00</p>
                 </div>
             </div>
-                <div className="mr-[380px] ml-[10px]">
-                    <p className="text-[14px] text-[#A4ACAD]">Город:</p>
-                    <h1 className="text-[16px] font-medium">Бишкек</h1>
-                </div>
-                <div className="flex gap-[15px]">
-                    <a href="#" className="text-[16px]">Отзывы</a>
-                    <a href="#" className="text-[16px]">Доставка и оплата</a>
-                    <button className="ml-[40px]">
+            <div className="ml-[10px] mr-[360px]">
+                <p>Город:</p>
+                <h1 className="text-[18px] font-medium">Бишкек</h1>
+            </div>
+          <div className="flex gap-[10px]">
+                    <a onClick={() => {
+                        navigate(`/reviews`);
+                      }}
+                    className="text-[18px] hover:text-orange-500 duration-300 cursor-pointer">Отзывы</a>
+                    <a onClick={() => {
+                        navigate(`/delivery`);
+                      }} className="text-[18px] hover:text-orange-500 duration-300">Доставка и оплата</a>
+                    <button className="pl-[30px]">
                         <Search/>
                     </button>
                 </div>
-
-
         </header>
     );
 };
