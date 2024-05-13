@@ -1,31 +1,43 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Layout from "./companet/layout/Layout.jsx";
 import HomePage from "./homePage/HomePage.jsx";
+import Error from "./homePage/Error.jsx";
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Products from "./companet/products/Products.jsx";
-import Card from "./companet/products/card/Card.jsx";
 import Details from "./companet/details/Details.jsx";
-
+import Layout from "./companet/layout/Layout.jsx";
+import ReviewsPage from './reviewsPage/ReviewsPage.jsx';
+import DeliveryPage from './deliveryPage/DeliveryPage.jsx';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout/>,
-        errorElement: <div>error</div>
-    },
-    {
-        path: '/',
-        element: <HomePage/>
-    }, {
-        path: '/details',
-        element: <Details/>
-    },
-    {
-        path:'/products',
-        element:<Products/>
-    },
+        errorElement: <Error/>,
+        children:[
+            {
+                path: '/',
+                element:<HomePage/>
+            }, {
+                path: '/details',
+                element: <Details/>
+            },
+            {
+                path:'/products',
+                element:<Products/>
+            },
+            {
+                path:"/reviews",
+                element:<ReviewsPage/>
+            },
+            {
+                path:"/delivery",
+                element:<DeliveryPage/>
+            },
+        ]
+    }
+
 
 
 ])

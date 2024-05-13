@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {Container} from "../../homePage/container/Container.jsx";
+import {Container} from "../../container/Container.jsx";
 import {Outlet} from "react-router";
 import SvgCet from "../../assets/svg/SvgCet.jsx";
-import OrderSushe from "./orderSushe/OrderSushe.jsx";
+import Info from "../Info.jsx";
 import Modal from "./modal/Modal.jsx";
 import {motion} from "framer-motion";
 import products from "../../api/Api.js";
@@ -19,26 +19,17 @@ const Products = () => {
             <Container>
 
                 <>
-                    <div className="mt-[30px]">
-                        <motion.div className="" initial={{opacity: 0, scale: 0.5}} animate={{opacity: 1, scale: 1}}
-                                    transition={{
-                                        duration: 0.8,
-                                        delay: 0.5,
-                                        ease: [0, 0.71, 0.2, 1.01]
-                                    }}>
-                            <h1 className="flex items-center gap-5 text-black text-3xl font-normal
-                    leading-9 tracking-normal text-left">
+                    <div className="mt-[30px] flex items-center justify-between">
+                        <motion.div initial={{opacity: 0, scale: 0.5}} animate={{opacity: 1, scale: 1}} transition={{duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01]}}>
+                            <h1 className="flex items-center gap-5 text-black text-3xl font-norm leading-9 tracking-normal text-left">
                                 <SvgCet/> Сеты
                             </h1>
                         </motion.div>
 
-
                         <Modal/>
-
                     </div>
 
                     <div className="mt-[30px] grid grid-cols-3 m-auto gap-7">
-
                         {products.map((el, index) => (
 
                             <motion.div>
@@ -71,11 +62,10 @@ const Products = () => {
 
                                 </motion.div>
                             </motion.div>
-
                         ))}
                     </div>
 
-                    <OrderSushe/>
+                    <Info/>
 
                 </>
 
