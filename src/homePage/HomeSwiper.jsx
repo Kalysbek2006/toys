@@ -1,80 +1,42 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import products from "../api/Api.js";
+import Card from "../companet/products/card/Card.jsx";
+import {motion} from "framer-motion";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
-// import required modules
-import { Pagination, Navigation } from 'swiper/modules';
-
-export default function App() {
-    const [swiperRef, setSwiperRef] = useState(null);
-
-    let appendNumber = 4;
-    let prependNumber = 1;
-
-    const prepend2 = () => {
-        swiperRef.prependSlide([
-            '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-            '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-        ]);
-    };
-
-    const prepend = () => {
-        swiperRef.prependSlide(
-            '<div class="swiper-slide">Slide ' + --prependNumber + '</div>'
-        );
-    };
-
-    const append = () => {
-        swiperRef.appendSlide(
-            '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>'
-        );
-    };
-
-    const append2 = () => {
-        swiperRef.appendSlide([
-            '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-            '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-        ]);
-    };
-
+const HomeSwiper = () => {
     return (
-        <>
+        <div>
+            <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <h1 className="text-[20px] font-medium">Новинки</h1>
+                <h1 className="text-[20px] font-medium">Популярное</h1>
+            </motion.div>
             <Swiper
-                onSwiper={setSwiperRef}
                 slidesPerView={3}
-                centeredSlides={true}
                 spaceBetween={30}
                 pagination={{
-                    type: 'fraction',
+                    clickable: true,
                 }}
-                navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-
-                </SwiperSlide>
+                {
+                    products.map(product =>(
+                        <SwiperSlide>
+                            <Card product={product}/>
+                        </SwiperSlide>
+                    ))
+                }
 
             </Swiper>
-
-            <p className="append-buttons">
-                <button onClick={() => prepend2()} className="prepend-2-slides">
-                    Prepend 2 Slides
-                </button>
-                <button onClick={() => prepend()} className="prepend-slide">
-                    Prepend Slide
-                </button>
-                <button onClick={() => append()} className="append-slide">
-                    Append Slide
-                </button>
-                <button onClick={() => append2()} className="append-2-slides">
-                    Append 2 Slides
-                </button>
-            </p>
-        </>
+        </div>
     );
-}
+};
+
+export default HomeSwiper;

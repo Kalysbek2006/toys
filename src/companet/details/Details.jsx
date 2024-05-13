@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Container} from "../../homePage/container/Container.jsx";
+import {Container} from "../../container/Container.jsx";
 import {Outlet} from "react-router";
 import {SlArrowLeft} from "react-icons/sl";
 import {BsChevronRight} from "react-icons/bs";
@@ -26,8 +26,8 @@ const Details = () => {
                     }}
                     transition={{
                         delay: 0
-                    }}
-                >
+                    }}>
+
                     <div className="flex justify-between items-center mt-[50px]">
                         <h1 className="flex items-center gap-3" onClick={() => navigate("/products")}>
                             <SlArrowLeft
@@ -54,12 +54,12 @@ const Details = () => {
                         delay: 0.2
                     }}
                 >
-                    <div className="w-[1178px] h-[435px] bg-white shadow-xl  mt-[52px] m-auto flex rounded-[10px]">
+                    <div className="w-[950px] h-[435px] bg-white shadow-xl mt-[50px] m-auto flex gap-[100px] rounded-[10px]">
 
-                        <img src={detailsG} alt="img" className="w-[620px] h-[435px]"/>
+                        <img src={detailsG} alt="img" className="w-[420px] h-[400px]"/>
 
-                        <div className="mt-[20px] ml-[30px]">
-                            <h1 className="text-[48px] font-medium text-black">Филадельфия и <br/>
+                        <div className="mt-[20px]">
+                            <h1 className="text-[40px] font-medium text-black">Филадельфия и <br/>
                                 лосось сет</h1>
                             <p className="text-[18px] font-light text-amber-600 mt-[10px] mb-[20px]">290 грамм</p>
 
@@ -89,9 +89,7 @@ const Details = () => {
 
                 </motion.div>
 
-
                 <SwiperDetails/>
-
 
                 <Outlet/>
             </Container>

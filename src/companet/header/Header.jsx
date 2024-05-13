@@ -4,7 +4,7 @@ import Search from "../../assets/svg/Search.jsx";
 
 const Header = () => {
     return (
-        <header className="w-[1169px] h-[94px] flex items-center justify-between border-b-[1px]">
+        <header className="w-[950зч] h-[94px] flex items-center border-b-[1px]">
             <div className="border-x-[1px]">
                 <h1 className="text-[18px] font-medium">Наш телефон</h1>
                 <p className="text-[#FF9846] text-[18px] font-medium">
@@ -20,17 +20,18 @@ const Header = () => {
                     <p className="text-[#A4ACAD] text-[15px]">работаем с 10:00 до 00:00</p>
                 </div>
             </div>
-          <div>
-                    <p className="text-[15px] text-[#A4ACAD]">Город:</p>
-                    <h1 className="text-[18px] font-medium">Бишкек</h1>
+                <div className="mr-[380px] ml-[10px]">
+                    <p className="text-[14px] text-[#A4ACAD]">Город:</p>
+                    <h1 className="text-[16px] font-medium">Бишкек</h1>
                 </div>
-          <div className="flex gap-[10px]">
-                    <a href="#" className="text-[18px]">Отзывы</a>
-                    <a href="#" className="text-[18px]">Доставка и оплата</a>
-                    <button className="">
+                <div className="flex gap-[15px]">
+                    <a href="#" className="text-[16px]">Отзывы</a>
+                    <a href="#" className="text-[16px]">Доставка и оплата</a>
+                    <button className="ml-[40px]">
                         <Search/>
                     </button>
                 </div>
+
 
         </header>
     );

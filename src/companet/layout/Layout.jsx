@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container} from "../../homePage/container/Container.jsx"
+import {Container} from "../../container/Container.jsx"
 import Header from "../header/Header.jsx";
 import {Outlet} from "react-router";
 import Footer from "../footer/Footer.jsx";

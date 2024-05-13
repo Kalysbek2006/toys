@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer>
-            <div className="container flex justify-between w-[900px] h-[260px] border-t-[1px] pt-[20px]">
+            <div className="container flex justify-around w-[900px] h-[260px] border-t-[1px] pt-[20px]">
                 <div>
                     <p>О компании</p>
                     <p className="py-[20px]">Доставка и оплата</p>
