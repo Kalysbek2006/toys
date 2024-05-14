@@ -27,7 +27,7 @@ const ModalTwo = ({props}) => {
         <div>
 
 
-            <div className="p-4 text-black flex flex-col gap-2 text-[18px] font-normal">
+            <div className="p-4 text-black flex flex-col gap-2 bg-blue-400 text-[18px] font-normal">
                 <p onClick={toggleName} className="cursor-pointer flex items-center gap-3 ">Название</p>
                 {name && (
                     <div className="p-2 text-white flex flex-col gap-1 text-[15px]">

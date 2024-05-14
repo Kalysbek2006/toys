@@ -1,9 +1,13 @@
 import React from 'react'
 import Delivery from '../companet/delivery/Delivery'
+import Cart from '../companet/cart/Cart'
 
 const DeliveryPage = () => {
   return (
-    <div><Delivery/></div>
+    <div className='flex'>
+      <Delivery/>
+      <Cart/>
+    </div>
   )
 }
 
