@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <section className="my-[50px]">
             <div className="container">
-                <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+                <Swiper  modules={[Pagination]} loop={true} className="mySwiper">
                     <SwiperSlide>
                         <div>
                             <img className="w-[100%] h-[500px] relative" src={One} alt="img"/>

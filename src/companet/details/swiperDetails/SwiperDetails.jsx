@@ -27,9 +27,7 @@ const SwiperDetails = () => {
                         <Swiper
                             slidesPerView={4}
                             spaceBetween={20} freeMode={true}
-                            pagination={{
-                                clickable: true,
-                            }} modules={[FreeMode, Pagination]}
+                            modules={[FreeMode, Pagination]}
                             className="mySwiper" loop={true}>
 
 

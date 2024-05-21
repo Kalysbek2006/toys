@@ -27,10 +27,10 @@ const ModalTwo = ({props}) => {
         <div>
 
 
-            <div className="p-4 text-black flex flex-col gap-2 bg-blue-400 text-[18px] font-normal">
+            <div className="p-4 text-black flex flex-col gap-2 bg-white text-[18px] font-normal">
                 <p onClick={toggleName} className="cursor-pointer flex items-center gap-3 ">Название</p>
                 {name && (
-                    <div className="p-2 text-white flex flex-col gap-1 text-[15px]">
+                    <div className="p-2 text-red-400 flex flex-col gap-1 text-[15px]">
                         <li>Саломон сет</li>
                         <li>Сет "5 Филадельфий"</li>
                         <li>Филадельфия и лосось сет</li>
@@ -46,7 +46,7 @@ const ModalTwo = ({props}) => {
 
                 <p onClick={toggleCheaper} className="cursor-pointer flex items-center gap-3 ">Сначала дешевле</p>
                 {cheaper && (
-                    <div className="p-2 text-white flex flex-col gap-1 text-[15px]">
+                    <div className="p-2 text-red-400 flex flex-col gap-1 text-[15px]">
                         <li>1469 СОМ</li>
                         <li>1479 СОМ"</li>
                         <li>1499 СОМ</li>
@@ -55,7 +55,7 @@ const ModalTwo = ({props}) => {
 
                 <p onClick={toggleExpensive} className="cursor-pointer flex items-center gap-3 ">Сначала дороже</p>
                 {expensive && (
-                    <div className="p-2 text-white flex flex-col gap-1 text-[15px]">
+                    <div className="p-2 text-red-400 flex flex-col gap-1 text-[15px]">
                         <li>1559 СОМ</li>
                         <li>1519СОМ</li>
                         <li>1500 СОМ</li>
@@ -66,7 +66,7 @@ const ModalTwo = ({props}) => {
 
                 <p onClick={toggleQuantity} className="cursor-pointer flex items-center gap-3 ">Количество кусочков</p>
                 {quantity && (
-                    <div className="p-2 text-white flex flex-col gap-1 text-[15px]">
+                    <div className="p-2 text-red-400 flex flex-col gap-1 text-[15px]">
                         <li>30 кусочков</li>
                         <li>40 кусочек</li>
                         <li>36 кусочек</li>
@@ -79,7 +79,7 @@ const ModalTwo = ({props}) => {
 
                 <p onClick={toggleWeight} className="cursor-pointer flex items-center gap-3">Вес</p>
                 {weight && (
-                    <div className="p-2 text-white flex flex-col gap-1 text-[15px]">
+                    <div className="p-2 text-red-400 flex flex-col gap-1 text-[15px]">
                         <li>1050 грамм</li>
                         <li>1120 грамм</li>
                         <li>1260 грамм</li>
